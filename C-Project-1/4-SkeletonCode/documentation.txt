@@ -1,0 +1,64 @@
+Description: LSB Image stegnography 
+Name: S S Sethulekshmy
+Date : 21/10/2024
+sample input:
+  Encoding output:
+sethulekshmy@DESKTOP-OU2C502:~/C-Project-1/4-SkeletonCode$ gcc *.c
+sethulekshmy@DESKTOP-OU2C502:~/C-Project-1/4-SkeletonCode$ ./a.out -e beautiful.bmp secret.txt stego_image.bmp
+INFO: Opening required files
+INFO: Opened beautiful.bmp
+INFO: Opened secret.txt
+INFO: Opened stego.bmp
+Done
+INFO: ## Encoding Procedure Started ##
+INFO: Checking for beautiful.bmp capacity to handle secret.txt
+INFO: Done. Found OK
+INFO: Copying Image Header
+INFO: Done
+INFO: Encoding Magic String Signature
+INFO: Done
+INFO: Checking for secret.txt size
+INFO: Done. Not Empty
+INFO: Encoding secret.txt File Extension
+INFO: Done
+INFO: Encoding secret.txt File Size
+INFO: Done
+INFO: Encoding secret.txt File Data
+INFO: Done
+INFO: Copying Left Over Data
+INFO: Done
+Encoding is done succesfully 
+Validation checking -Encoding
+checking for argments
+sethulekshmy@DESKTOP-OU2C502:~/C-Project-1/4-SkeletonCode$ gcc *.c
+sethulekshmy@DESKTOP-OU2C502:~/C-Project-1/4-SkeletonCode$ ./a.out -e beautiful.bmp 
+Invalid number of arguments for encoding.
+sethulekshmy@DESKTOP-OU2C502:~/C-Project-1/4-SkeletonCode$ ./a.out -e beautiful.txt stego.bmp
+Encoding: ./lsb_steg -e <.bmp file> <.txt file> [output file]
+sethulekshmy@DESKTOP-OU2C502:~/C-Project-1/4-SkeletonCode$ ./a.out -e beautiful.bmp secret.txt stego_img.txt
+Encoding: ./lsb_steg -e <.bmp file> <.txt file> [output file]
+Decoding output
+sethulekshmy@DESKTOP-OU2C502:~/C-Project-1/4-SkeletonCode$ ./a.out -d stego_img.bmp
+INFO: Output file not mentioned.creating output.txt as default
+INFO: Opening required files
+INFO: Opened stego_image.bmp
+INFO: ## Decoding Procedure Started ##
+INFO: Decoding Magic String Signature
+#*
+INFO: Done
+INFO: Decoding Output File Extension
+INFO: done
+INFO: opened output.txt
+INFO: Done.opened all required files
+INFO: Done
+INFO: Decoding output.txt File Size
+INFO: Done
+INFO: Decoding output.txt File Data
+INFO: Done
+Decoding done successfully
+Decoding -validations
+sethulekshmy@DESKTOP-OU2C502:~/C-Project-1/4-SkeletonCode$ ./a.out -d stego_img.bsh
+Decoding: ./lsb_steg -d <.bmp file> [output file]
+sethulekshmy@DESKTOP-OU2C502:~/C-Project-1/4-SkeletonCode$ ./a.out -d 
+Invalid number of arguments for decoding.
+
